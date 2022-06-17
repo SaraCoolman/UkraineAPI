@@ -10,9 +10,9 @@ module.exports = {
     dialect: 'mysql',
     ssl: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") },
     pool: {
-        max: 5,
+        max: 8,
         min: 1,
-        acquire: 30000,
+        acquire: 3000000,
         idle: 100000
     },
     dialect: 'mysql',
