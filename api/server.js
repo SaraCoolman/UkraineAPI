@@ -29,9 +29,9 @@ app.use(express.urlencoded({ extended: true }));
 // simple route
 
 
-const db = require("./app/models");
-require("./app/routes/lodge.routes")(app);
-require("./app/routes/person.routes")(app); 
+const db = require("./api/app/models");
+require("./api/app/routes/lodge.routes")(app);
+require("./api/app/routes/person.routes")(app); 
 db.sequelize.sync();
 
 
