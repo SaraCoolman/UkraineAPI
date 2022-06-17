@@ -1,6 +1,6 @@
 const dbConfig = require("../config/db.config.js");
 const Sequelize = require("sequelize");
-var fs = require('fs');
+//var fs = require('fs');
 const sequelize = new Sequelize(dbConfig.database, dbConfig.user, dbConfig.password, {
     host: dbConfig.host,
     dialect: dbConfig.dialect,
@@ -11,10 +11,12 @@ const sequelize = new Sequelize(dbConfig.database, dbConfig.user, dbConfig.passw
         acquire: dbConfig.pool.acquire,
         idle: dbConfig.pool.idle
     },
-    //: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") },
-    //dialectOptions: {
-      //  ssl: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") }
-   // }
+   // fs: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") },
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: false
+           }, }
+  // }
 });
 const db = {};
 db.Sequelize = Sequelize;

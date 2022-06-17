@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to UkraineLodgeService" });
 });
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
