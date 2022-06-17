@@ -11,9 +11,9 @@ module.exports = {
     ssl: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") },
     pool: {
         max: 5,
-        min: 0,
+        min: 1,
         acquire: 30000,
-        idle: 10000
+        idle: 100000
     },
     dialect: 'mysql',
 };
