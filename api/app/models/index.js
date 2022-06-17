@@ -11,9 +11,9 @@ const sequelize = new Sequelize(dbConfig.database, dbConfig.user, dbConfig.passw
         acquire: dbConfig.pool.acquire,
         idle: dbConfig.pool.idle
     },
-    ssl: { ca: fs.readFileSync("https://github.com/SaraCoolman/UkraineAPI/blob/main/DigiCertGlobalRootCA.crt.pem") },
+    ssl: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") },
     dialectOptions: {
-        ssl: { ca: fs.readFileSync("https://github.com/SaraCoolman/UkraineAPI/blob/main/DigiCertGlobalRootCA.crt.pem") }
+        ssl: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") }
     }
 });
 const db = {};

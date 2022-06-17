@@ -8,7 +8,7 @@ module.exports = {
     database: 'ukrainelodgeservice',
     port: 3306,
     dialect: 'mysql',
-    ssl: { ca: fs.readFileSync("https://github.com/SaraCoolman/UkraineAPI/blob/main/DigiCertGlobalRootCA.crt.pem") },
+    ssl: { ca: fs.readFileSync("./cert/DigiCertGlobalRootCA.crt.pem") },
     pool: {
         max: 5,
         min: 0,
