@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
 
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || PORT;
 
 // Add Access Control Allow Origin headers
 app.use((req, res, next) => {

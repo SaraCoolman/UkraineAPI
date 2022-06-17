@@ -3,10 +3,13 @@
     "",
     "\\api",
     "\\api\\app",
-    "\\ui",
+    "\\api\\app\\config",
+    "\\api\\app\\controllers",
+    "\\api\\app\\models",
     "\\ui\\src",
     "\\ui\\src\\components",
     "\\ui\\src\\services"
   ],
+  "SelectedNode": "\\api\\app\\models\\index.js",
   "PreviewInSolutionExplorer": false
 }
