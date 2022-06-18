@@ -36,7 +36,7 @@ db.sequelize.sync();
 
 
 app.get("/", (req, res) => {
-	res.json({ message: "Welcome to the Ukraine Lodge Service" });
+	res.json({ message: "Welcome to the Ukraine Lodge Service Test" });
 });
 //require("./app/routes/tutorial.routes")(app);
 
